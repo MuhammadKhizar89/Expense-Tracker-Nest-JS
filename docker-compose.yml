@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: expense-tracker-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    command: yarn start:dev

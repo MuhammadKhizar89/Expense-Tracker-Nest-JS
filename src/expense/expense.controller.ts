@@ -8,7 +8,7 @@ export class ExpenseController {
 
     @Post('create')
     createExpense(@Res() res: Response) {
-        const data = this.expenseService.createExpense();
-        return res.status(200).json(data);
+        // const data = this.expenseService.createExpense();
+        return res.status(200).json("sa");
     }
 }

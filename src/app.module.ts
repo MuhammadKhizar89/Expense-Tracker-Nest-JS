@@ -4,10 +4,14 @@ import { AppService } from './app.service';
 import { ExpenseModule } from './expense/expense.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { UserModule } from './user/user.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ExpenseModule, PrismaModule, UserModule],
+  imports: [
+    ConfigModule.forRoot({
+    isGlobal: true, 
+  }), ExpenseModule, PrismaModule, UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

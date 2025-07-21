@@ -1,6 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserDTO } from 'src/dto/user.dto';
+import tryCatch from 'src/utils/tryCatch';
 
 @Controller('user')
 export class UserController {
@@ -9,8 +10,9 @@ export class UserController {
     @Post('signup')
     signup(@Body() body: UserDTO) {
         console.log(body);
-        return this.userService.signup();
+        return tryCatch(() => this.userService.signup(body));
     }
+
 
     @Post('signin')
     signin() {

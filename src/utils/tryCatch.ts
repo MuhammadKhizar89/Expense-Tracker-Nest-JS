@@ -10,7 +10,7 @@ export default async function tryCatch<T>(fn: () => Promise<T>) {
       );
     }
     throw new HttpException(
-      { success: false, message: 'An unexpected error occurred' },
+      { success: false, message: error.message||'An unexpected error occurred' },
       HttpStatus.INTERNAL_SERVER_ERROR
     );
   }

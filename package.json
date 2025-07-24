@@ -6,8 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "generate": "prisma generate",
-"build": "yarn generate && nest build",
+    "build": "nest build && prisma generate",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "build:nest": "nest build",
    "start": "nest start",

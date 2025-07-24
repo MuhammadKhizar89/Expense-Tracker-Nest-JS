@@ -32,7 +32,6 @@ export class AuthService {
     return {
       success: true,
       message: 'User created successfully',
-      data: { name: response.name, email: response.email },
     };
   }
 

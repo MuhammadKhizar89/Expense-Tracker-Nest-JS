@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, Patch, Post, Query, Req, UseGuards } from '@nestjs/common';
 import { ExpenseService } from './expense.service';
-import { ExpenseDTO } from 'src/dto/expense.dto';
-import tryCatch from 'src/utils/tryCatch';
-import { AuthGuard } from 'src/gaurds/auth.gaurd';
+import { ExpenseDTO } from '../dto/expense.dto';
+import tryCatch from '../utils/tryCatch';
+import { AuthGuard } from '../gaurds/auth.gaurd';
 
 @Controller('expense')
 export class ExpenseController {

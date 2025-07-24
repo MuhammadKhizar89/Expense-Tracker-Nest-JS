@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { signInDTO, signUpDTO } from 'src/dto/auth.dto';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { signInDTO, signUpDTO } from '../dto/auth.dto';
+import { PrismaService } from '../prisma/prisma.service';
 import * as jwt from 'jsonwebtoken';
 import { Response } from 'express';
 

@@ -1,6 +1,6 @@
 import { Body, Controller, Post, Res } from '@nestjs/common';
-import { signInDTO, signUpDTO } from 'src/dto/auth.dto';
-import tryCatch from 'src/utils/tryCatch';
+import { signInDTO, signUpDTO } from '../dto/auth.dto';
+import tryCatch from '../utils/tryCatch';
 import { Response } from 'express';
 import { AuthService } from './auth.service';
 

@@ -20,7 +20,12 @@ export class ExpenseService {
     return {
       success: true,
       message: 'Expense created successfully',
-      data: newExpense,
+      data: {
+        id: newExpense.id,
+        title: newExpense.title,
+        amount: newExpense.amount,
+        date: newExpense.date,
+      },
     };
   }
 

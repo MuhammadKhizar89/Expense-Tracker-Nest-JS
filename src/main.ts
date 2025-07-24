@@ -14,8 +14,4 @@ async function bootstrap() {
   });
   await app.listen(process.env.PORT ?? 3000);
 }
-if (require.main === module) {
-  bootstrap();
-}
-
-export default bootstrap;
+bootstrap();
